@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Hi, {{ user.nickname }}!</h1>
+    <br/>
+    <br/>
+    <br/>
+ 	<h2>Click to start calculating your stock profit</h2>
+<br/>
+<!--
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" style="margin-left: 250px">Click to Start!!!</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enter Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/calculate" method="POST" name="calculate_form">
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">A stock symbol:</label>
+            <input type="text" class="form-control" name="SYM" id="recipient-name" style="min-width: 100%">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Allotment(number of shares):</label>
+            <input type="text" class="form-control" name="ALT" id="recipient-name" style="min-width: 100%">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Final Share Price(in $$):</label>
+            <input type="text" class="form-control" name="FSP" id="recipient-name" style="min-width: 100%">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Sell Commission(in $$):</label>
+            <input type="text" class="form-control" name="SC" id="recipient-name" style="min-width: 100%">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Inital share price(in $$):</label>
+            <input type="text" class="form-control" name="ISP" id="recipient-name" style="min-width: 100%">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Buy Commission(in $$):</label>
+            <input type="text" class="form-control" name="BC" id="recipient-name" style="min-width: 100%">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Capital Gain Tax Rate(in %age):</label>
+            <input type="text" class="form-control" name="CG" id="recipient-name" style="min-width: 100%">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/calculate"><button type="submit" class="btn btn-primary">Calculate</button></a>
+      </div>
+    </div>
+  </div>
+  http://localhost:5000
+</div> -->
+
+<html>
+   <body>
+      <form action = "/result" method = "POST">
+        <p>Symbol <input type="text" name="SYM" /></p>
+        <p>Allotment(number of shares): <input type="text" name="ALT" /></p>
+        <p>Final Share Price(in $) <input type ="text" name = "FSP" /></p>
+        <p>Sell Commission(in $$): <input type = "text" name = "SC" /></p>
+        <p>Inital share price(in $$): <input type = "text" name = "ISP" /></p>
+        <p>Buy Commission(in $$): <input type = "text" name = "BC" /></p>
+        <p>Capital Gain Tax Rate(in %age): <input type ="text" name = "CG" /></p>
+        <p><input type="submit" value="submit" /></p>
+      </form>
+   </body>
+</html>
+{% endblock %}
