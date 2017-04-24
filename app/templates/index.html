@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+
     <h1>Hi, {{ user.nickname }}!</h1>
     <br/>
     <br/>
     <br/>
- 	<h2>Click to start calculating your stock profit</h2>
+ 	<h2>Fill the form below to start calculating your stock profit</h2>
 <br/>
 <!--
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" style="margin-left: 250px">Click to Start!!!</button>
@@ -62,14 +64,16 @@
 <html>
    <body>
       <form action = "/result" method = "POST">
-        <p>Symbol <input type="text" name="SYM" /></p>
-        <p>Allotment(number of shares): <input type="text" name="ALT" /></p>
-        <p>Final Share Price(in $) <input type ="text" name = "FSP" /></p>
-        <p>Sell Commission(in $$): <input type = "text" name = "SC" /></p>
-        <p>Inital share price(in $$): <input type = "text" name = "ISP" /></p>
-        <p>Buy Commission(in $$): <input type = "text" name = "BC" /></p>
-        <p>Capital Gain Tax Rate(in %age): <input type ="text" name = "CG" /></p>
-        <p><input type="submit" value="submit" /></p>
+        <div class="para" style="margin-left: 100px">
+          <p>Symbol: <input type="text" name="SYM" style="width: 300px" /></p>
+          <p>Allotment(number of shares): <input type="text" name="ALT" style="width: 170px" /></p>
+          <p>Final Share Price(in $):  <input type ="text" name = "FSP" /></p>
+          <p>Sell Commission(in $$): <input type = "text" name = "SC" /></p>
+          <p>Inital share price(in $$): <input type = "text" name = "ISP" /></p>
+          <p>Buy Commission(in $$): <input type = "text" name = "BC" /></p>
+          <p>Capital Gain Tax Rate(in %age): <input type ="text" name = "CG" style="width: 160px" /></p>
+        </div>  
+        <p><input type="submit" value="Submit" class="btn btn-primary" style="margin-left: 230px" /></p>
       </form>
    </body>
 </html>

@@ -25,14 +25,16 @@
    <title>Result Page</title>
 </head>
 <body>
-   <h1>Proceeds: {{ proceeds }}</h1>
-   <h1>Purchase Price: {{ pp }}</h1>
-   <h1>Capital Gain: {{ CapitalGain }}</h1>
-   <h1>Tax on capital gain: {{ TaxOnCapitalGain }}</h1>
-   <h1>Net Profit: {{ NetProfit }}</h1>
-   <h1>Cost: {{ cost }}</h1>
-   <h1>Return On Investment: {{ ReturnOnInvestment }}</h1>
-   <h1>Break Even: {{ breakeven }}</h1>
+   <div style="text-align: center">
+      <h1>Proceeds: {{ proceeds }}</h1>
+      <h1>Purchase Price: {{ pp }}</h1>
+      <h1>Capital Gain: {{ CapitalGain }}</h1>
+      <h1>Tax on capital gain: {{ TaxOnCapitalGain }}</h1>
+      <h1>Net Profit: {{ NetProfit }}</h1>
+      <h1>Cost: {{ cost }}</h1>
+      <h1>Return On Investment: {{ ReturnOnInvestment }}</h1>
+      <h1>Break Even: {{ breakeven }}</h1>
+   </div>
 </body>
 </html>
 {% endblock %}
