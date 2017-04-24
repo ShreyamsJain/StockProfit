@@ -66,7 +66,7 @@ def result():
         cost = round(purchase_price + (bc) + (sc) + TaxOnCapitalGain,2)
         ReturnOnInvestment = round((NetProfit*100.0)/cost,2)
         breakeven = round((purchase_price + (bc) + (sc))/(allotment),2)
-      	return render_template('result.html',symbol=symbol, title='Result', result=result, proceeds=proceeds, pp = purchase_price, CapitalGain=CapitalGain, TaxOnCapitalGain=TaxOnCapitalGain, NetProfit=NetProfit, cost=cost, ReturnOnInvestment=ReturnOnInvestment, breakeven=breakeven)
+      	return render_template('result.html',symbol=symbol, title='Result', result=result, allotment=allotment, isp=isp, bc=bc, sc=sc, proceeds=proceeds, cg=cg, pp = purchase_price, CapitalGain=CapitalGain, TaxOnCapitalGain=TaxOnCapitalGain, NetProfit=NetProfit, cost=cost, ReturnOnInvestment=ReturnOnInvestment, breakeven=breakeven)
 
 if __name__ == '__main__':
    app.run(debug = True)

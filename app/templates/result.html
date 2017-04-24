@@ -26,14 +26,16 @@
 </head>
 <body>
    <div style="text-align: center">
-      <h1>Proceeds: {{ proceeds }}</h1>
-      <h1>Purchase Price: {{ pp }}</h1>
-      <h1>Capital Gain: {{ CapitalGain }}</h1>
-      <h1>Tax on capital gain: {{ TaxOnCapitalGain }}</h1>
-      <h1>Net Profit: {{ NetProfit }}</h1>
-      <h1>Cost: {{ cost }}</h1>
-      <h1>Return On Investment: {{ ReturnOnInvestment }}</h1>
-      <h1>Break Even: {{ breakeven }}</h1>
+      <h1>Profit Report: </h1>
+      <h2>Proceeds: ${{ proceeds }}</h2>
+      <h2>Cost: ${{ cost }}</h2>
+      <h2>Total Purchase Price: {{ allotment }} X ${{ isp }} = {{ pp }}</h2>
+      <h2>Buy Commission: {{ bc }}</h2>
+      <h2>Sell Commission: {{ sc }}</h2>
+      <h2>Tax on capital gain: {{ cg }}% of {{ CapitalGain}} = {{ TaxOnCapitalGain }}</h2>
+      <h2>Net Profit: ${{ NetProfit }}</h2>
+      <h2>Return On Investment: {{ ReturnOnInvestment }}%</h2>
+      <h2>Break Even: ${{ breakeven }}</h2>
    </div>
 </body>
 </html>
